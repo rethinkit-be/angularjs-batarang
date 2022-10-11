@@ -20,7 +20,7 @@ jobs:
       with:
         node-version: 11.x
     - run: npm install
-    - run: gulp package
+    - run: gulp zip
     - uses: actions/upload-artifact@v3
       with:
         name: batarang
