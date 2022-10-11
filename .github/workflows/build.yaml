@@ -20,4 +20,4 @@ jobs:
       with:
         node-version: 11.x
     - run: npm install
-    - run: npm run build
+    - run: gulp package
