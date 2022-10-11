@@ -21,3 +21,7 @@ jobs:
         node-version: 11.x
     - run: npm install
     - run: gulp package
+    - uses: actions/upload-artifact@v3
+      with:
+        name: batarang
+        path: batarang-0.10.9.zip
