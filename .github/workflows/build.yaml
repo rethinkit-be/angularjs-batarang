@@ -18,6 +18,5 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 0.12.x
-    - run: apt-get install node
     - run: npm install
     - run: .node_modules/bin/gulp
