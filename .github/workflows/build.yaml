@@ -20,4 +20,4 @@ jobs:
       with:
         node-version: 12.x
     - run: npm install
-    - run: .node_modules/bin/gulp
+    - run: npm run build
