@@ -13,11 +13,11 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    
     steps:
-    - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
         node-version: 0.12.x
-    - run: npm -g install yarn@1.1.0
-    - run: yarn install --frozen-lockfile
-    - run: yarn build
+    - run: apt-get install node
+    - run: npm install
+    - run: .node_modules/bin/gulp
