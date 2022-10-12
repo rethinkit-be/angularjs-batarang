@@ -3,10 +3,10 @@
   "version": "0.10.9",
   "description": "Extends the Developer Tools, adding tools for debugging and profiling AngularJS applications.",
   "devtools_page": "devtoolsBackground.html",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "permissions": [
     "tabs",
-    "<all_urls>"
+    "activeTab"
   ],
   "icons": {
     "16": "img/webstore-icon.png",
@@ -23,12 +23,10 @@
   ],
 
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "service_worker": "background.js"
   },
 
-  "page_action": {
+  "action": {
     "default_icon": {
       "19": "img/icon19.png",
       "38": "img/icon38.png"
@@ -37,8 +35,9 @@
     "default_title": "AngularJS Super-Powered"
   },
 
-  "web_accessible_resources": [
-    "dist/hint.js"
-  ],
-  "minimum_chrome_version": "21.0.1180.57"
+  "web_accessible_resources": [{
+    "resources":["dist/hint.js"],
+    "matches":["<all_urls>"]
+  }],
+  "minimum_chrome_version": "106.0.5249.91"
 }
